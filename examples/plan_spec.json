@@ -1,0 +1,13 @@
+{
+  "days_per_week": 4,
+  "weekly_hours": 6.0,
+  "days_available": ["tue", "thu", "sat", "sun"],
+  "long_ride_day": "sat",
+  "weeks": 4,
+  "phase": "base",
+  "goal": null,
+  "start_date": "2026-08-31",
+  "current_ctl": 47.7,
+  "use_block": false,
+  "language": "pt-BR"
+}

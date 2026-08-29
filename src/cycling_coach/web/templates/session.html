@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}{{ session.name }} · {{ plan.id }}{% endblock %}
+{% block crumbs %}
+<a class="crumb" href="/plan/{{ plan.id }}">{{ plan.id }}</a>
+{% if week %}<a class="crumb" href="/plan/{{ plan.id }}/week/{{ week.index }}">{{ L.week }} {{ week.index }}</a>{% endif %}
+{% endblock %}
+
+{% block content %}
+<span class="skey overline">{{ L.session }}</span>
+<h1>{{ session.name }}</h1>
+<p class="hint">{{ fmt_day(session.date, L) }}
+  {%- if week %} · {{ L.week }} {{ week.index }}{% endif %} · {{ session.kind }}</p>
+
+<p class="statusline s-{{ session.status }}">
+  <span class="glyph" aria-hidden="true">{{ status_glyph(session.status) }}</span>
+  {{ status_label(session.status, L) }}
+</p>
+
+<section class="targets">
+  {% if session.target_watts %}
+  <div class="big">
+    <span class="skey">{{ L.watts }}</span>
+    <span class="bigval">{{ session.target_watts[0] }}–{{ session.target_watts[1] }}<small> W</small></span>
+  </div>
+  {% endif %}
+  <div class="big">
+    <span class="skey">{{ L.duration }}</span>
+    <span class="bigval">{{ session.duration_min }}<small> {{ L.min }}</small></span>
+  </div>
+  {% if session.target_zone %}
+  <div class="big">
+    <span class="skey">{{ L.zone }}</span>
+    <span class="bigval">{{ session.target_zone }}</span>
+  </div>
+  {% endif %}
+  {% if session.planned_tss %}
+  <div class="big">
+    <span class="skey">TSS</span>
+    <span class="bigval">{{ session.planned_tss|round|int }}</span>
+  </div>
+  {% endif %}
+</section>
+
+{% if session.description %}
+<section class="card"><h2>{{ L.description }}</h2>
+  <p class="desc">{{ session.description }}</p></section>
+{% endif %}
+
+{% if fuel_rows or fuel_notes or fuel_warnings %}
+<section class="card fuel">
+  <h2>{{ L.fueling }}</h2>
+  {% if fuel_rows %}
+  <dl class="fgrid">
+    {% for r in fuel_rows %}
+    <div class="fitem"><dt>{{ r.label }}</dt><dd>{{ r.value }}<small> {{ r.unit }}</small></dd></div>
+    {% endfor %}
+  </dl>
+  {% endif %}
+  {% if fuel_notes %}
+  <h3>{{ L.notes }}</h3>
+  <ul class="fnotes">{% for n in fuel_notes %}<li>{{ n }}</li>{% endfor %}</ul>
+  {% endif %}
+  {% if fuel_warnings %}
+  <h3>{{ L.warnings }}</h3>
+  <ul class="fnotes warnlist">{% for w in fuel_warnings %}<li>{{ w }}</li>{% endfor %}</ul>
+  {% endif %}
+</section>
+{% endif %}
+
+{% if session.actual %}
+<section class="card"><h2>{{ L.actual }}</h2>
+  <dl class="fgrid">
+    {% for k, v in session.actual.items() %}{% if v is not none %}
+    <div class="fitem"><dt>{{ k.replace('_', ' ') }}</dt><dd>{{ v }}</dd></div>
+    {% endif %}{% endfor %}
+  </dl>
+</section>
+{% endif %}
+{% endblock %}

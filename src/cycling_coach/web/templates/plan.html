@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}{{ plan.id }} · {{ L.app }}{% endblock %}
+{% block crumbs %}<a class="crumb" href="/">{{ L.dashboard }}</a>{% endblock %}
+
+{% block content %}
+<h1>{{ plan.id }}</h1>
+<p class="hint">{{ L.phase }}: {{ plan.phase }} ·
+  {{ plan.weeks|length }} {{ L.weeks|lower }} ·
+  {{ plan.total_hours }} {{ L.hours }} · {{ plan.total_tss|round|int }} TSS
+  {%- if plan.start_date %} · {{ fmt_day(plan.start_date, L) }} – {{ fmt_day(plan.end_date, L) }}{% endif %}
+</p>
+
+{% if plan.rationale %}
+<section class="card"><h2>{{ L.rationale }}</h2><p>{{ plan.rationale }}</p></section>
+{% endif %}
+{% if plan.warnings %}
+<section class="card warn"><h2>{{ L.warnings }}</h2>
+  <ul>{% for w in plan.warnings %}<li>{{ w }}</li>{% endfor %}</ul></section>
+{% endif %}
+
+{% if tss_chart %}
+<section class="card"><h2>{{ L.weekly_tss }}</h2>{{ tss_chart|safe }}</section>
+{% endif %}
+
+<section class="card">
+  <h2>{{ L.compliance }}</h2>
+  <p class="hint">{{ L.completed }}: {{ compliance.completed }} /
+    {{ compliance.due }} · {{ L.missed }}: {{ compliance.missed }}</p>
+</section>
+
+{% for w in plan.weeks %}
+<section class="card week">
+  {{ m.week_card(plan, w, L, current) }}
+  <div class="slist">
+    {% for s in w.sessions %}{{ m.session_row(plan, s, L) }}{% else %}
+    <p class="hint">{{ L.no_sessions }}</p>{% endfor %}
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

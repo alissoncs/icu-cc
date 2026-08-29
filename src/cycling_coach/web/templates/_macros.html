@@ -1,0 +1,31 @@
+{% macro session_row(plan, s, L, compact=false) %}
+<a class="srow s-{{ s.status }}{% if s.kind == 'rest' %} s-rest{% endif %}"
+   href="/session/{{ plan.id }}/{{ s.date.isoformat() }}">
+  <span class="sday">{{ fmt_day(s.date, L) }}</span>
+  <span class="sbody">
+    <span class="sname">{{ s.name }}</span>
+    <span class="smeta">
+      {% if s.kind == 'rest' %}{{ L.rest }}{% else %}{{ s.duration_min }} {{ L.min }}{% endif %}
+      {%- if s.target_watts %} · {{ s.target_watts[0] }}–{{ s.target_watts[1] }} W{% endif %}
+      {%- if s.target_zone %} · {{ s.target_zone }}{% endif %}
+      {%- if s.planned_tss %} · {{ s.planned_tss|round|int }} TSS{% endif %}
+    </span>
+  </span>
+  <span class="sstatus" title="{{ status_label(s.status, L) }}">
+    <span class="glyph" aria-hidden="true">{{ status_glyph(s.status) }}</span>
+    <span class="stext">{{ status_label(s.status, L) }}</span>
+  </span>
+</a>
+{% endmacro %}
+
+{% macro week_card(plan, w, L, current=none) %}
+<a class="wcard{% if current and current.index == w.index %} wcard-now{% endif %}"
+   href="/plan/{{ plan.id }}/week/{{ w.index }}">
+  <span class="wtitle">{{ L.week }} {{ w.index }}
+    <span class="badge b-{{ w.kind }}">{{ week_kind_label(w.kind, L) }}</span>
+  </span>
+  <span class="wmeta">{{ fmt_day(w.start_date, L) }} – {{ fmt_day(w.end_date, L) }}</span>
+  <span class="wnums">{{ w.planned_hours }} {{ L.hours }} · {{ w.planned_tss|round|int }} TSS
+    · {{ w.sessions|length }} {{ L.sessions|lower }}</span>
+</a>
+{% endmacro %}

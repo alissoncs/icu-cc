@@ -1,0 +1,16 @@
+{
+  "name": "Long endurance with tempo blocks",
+  "type": "Ride",
+  "start_date_local": "2026-08-24T07:12:00",
+  "moving_time": 12600,
+  "icu_average_watts": 178,
+  "icu_weighted_avg_watts": 196,
+  "average_heartrate": 141,
+  "max_heartrate": 172,
+  "icu_training_load": 215,
+  "icu_ftp": 250,
+  "icu_power_hr": 11.4,
+  "distance": 104300,
+  "total_elevation_gain": 1420,
+  "icu_zone_times": {"Z1": 900, "Z2": 5400, "Z3": 4200, "Z4": 1500, "Z5": 480, "Z6": 120, "Z7": 0}
+}

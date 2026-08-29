@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}{{ L.help_title }} · {{ L.app }}{% endblock %}
+{% block crumbs %}<span class="crumb">{{ L.help_title }}</span>{% endblock %}
+{% block content %}
+<section class="card">
+  <h2>{{ L.help_skills }}</h2>
+  <p class="hint">{{ L.help_skills_hint }}</p>
+  <ul class="reflist">
+    {% for s in skills %}
+    <li>
+      <span class="ref-title">{{ s.title }}</span>
+      <span class="ref-desc">{{ s.desc }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="card">
+  <h2>{{ L.help_commands }}</h2>
+  <p class="hint">{{ L.help_commands_hint }}</p>
+  <ul class="reflist">
+    {% for c in commands %}
+    <li>
+      <span class="ref-title">{{ c.title }}</span>
+      <span class="ref-desc">{{ c.desc }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

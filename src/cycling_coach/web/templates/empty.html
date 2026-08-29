@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ L.no_plans }} · {{ L.app }}{% endblock %}
+{% block content %}
+<section class="card empty">
+  <h1>{{ L.no_plans }}</h1>
+  <p class="hint">{{ L.no_plans_hint }}</p>
+  <pre class="cmd">coach plan create --spec spec.json</pre>
+</section>
+{% endblock %}

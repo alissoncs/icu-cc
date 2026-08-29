@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}{{ L.week }} {{ week.index }} · {{ plan.id }}{% endblock %}
+{% block crumbs %}
+<a class="crumb" href="/">{{ L.dashboard }}</a>
+<a class="crumb" href="/plan/{{ plan.id }}">{{ plan.id }}</a>
+{% endblock %}
+
+{% block content %}
+<h1>{{ L.week }} {{ week.index }}
+  <span class="badge b-{{ week.kind }}">{{ week_kind_label(week.kind, L) }}</span></h1>
+<p class="hint">{{ fmt_day(week.start_date, L) }} – {{ fmt_day(week.end_date, L) }} ·
+  {{ week.planned_hours }} {{ L.hours }} · {{ week.planned_tss|round|int }} TSS
+  {%- if week.target_tss %} ({{ L.target }} {{ week.target_tss|round|int }}){% endif %}</p>
+{% if week.note %}<p class="note">{{ week.note }}</p>{% endif %}
+
+<section class="card">
+  <h2>{{ L.sessions }}</h2>
+  <div class="slist">
+    {% for s in week.sessions %}{{ m.session_row(plan, s, L) }}{% else %}
+    <p class="hint">{{ L.no_sessions }}</p>{% endfor %}
+  </div>
+</section>
+
+<nav class="weeknav">
+  {% for w in weeks %}
+  <a class="wpill{% if w.index == week.index %} on{% endif %}"
+     href="/plan/{{ plan.id }}/week/{{ w.index }}">{{ w.index }}</a>
+  {% endfor %}
+</nav>
+{% endblock %}

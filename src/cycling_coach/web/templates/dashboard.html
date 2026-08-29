@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+{% block title %}{{ L.dashboard }} · {{ L.app }}{% endblock %}
+
+{% block content %}
+<section class="stats">
+  <div class="stat">
+    <span class="skey">{{ L.fitness }}</span>
+    <span class="sval">{{ pmc_point.ctl if pmc_point else '—' }}</span>
+  </div>
+  <div class="stat">
+    <span class="skey">{{ L.fatigue }}</span>
+    <span class="sval">{{ pmc_point.atl if pmc_point else '—' }}</span>
+  </div>
+  <div class="stat">
+    <span class="skey">{{ L.form }}</span>
+    <span class="sval">{{ pmc_point.tsb if pmc_point else '—' }}</span>
+  </div>
+</section>
+{% if form %}<p class="formline">{{ form }}</p>{% endif %}
+
+{% if pmc_chart %}
+<section class="card">
+  <h2>{{ L.pmc_title }}</h2>
+  {{ pmc_chart|safe }}
+  <ul class="legend">
+    <li><i class="sw ch-ctl"></i>{{ L.fitness }}</li>
+    <li><i class="sw ch-atl"></i>{{ L.fatigue }}</li>
+    <li><i class="sw ch-tsb"></i>{{ L.form }}</li>
+  </ul>
+  <p class="hint">{{ L.pmc_note }}</p>
+</section>
+{% endif %}
+
+{% if next_session %}
+<section class="card next">
+  <h2>{{ L.next_session }}</h2>
+  {{ m.session_row(plan, next_session, L) }}
+</section>
+{% endif %}
+
+<section class="card">
+  <h2>{{ L.this_week }}{% if week %} — {{ L.week }} {{ week.index }}{% endif %}</h2>
+  {% if week and week.sessions %}
+    <div class="slist">
+      {% for s in week.sessions %}{{ m.session_row(plan, s, L) }}{% endfor %}
+    </div>
+    <p class="hint">{{ week.planned_hours }} {{ L.hours }} ·
+      {{ week.planned_tss|round|int }} TSS</p>
+  {% else %}
+    <p class="hint">{{ L.no_sessions }}</p>
+  {% endif %}
+</section>
+
+<section class="card">
+  <h2>{{ L.compliance }}</h2>
+  <div class="compliance">
+    <span class="cpct">{{ compliance.pct if compliance.pct is not none else '—' }}<small>%</small></span>
+    <ul class="cbits">
+      <li><span class="glyph ok" aria-hidden="true">✓</span> {{ L.completed }}: {{ compliance.completed }}</li>
+      <li><span class="glyph bad" aria-hidden="true">✕</span> {{ L.missed }}: {{ compliance.missed }}</li>
+      <li><span class="glyph" aria-hidden="true">Σ</span> {{ L.planned }}: {{ compliance.planned_tss|round|int }} TSS
+        {%- if compliance.actual_tss %} · {{ L.actual }}: {{ compliance.actual_tss|round|int }} TSS{% endif %}</li>
+    </ul>
+  </div>
+</section>
+
+{% if tss_chart %}
+<section class="card">
+  <h2>{{ L.weekly_tss }}</h2>
+  {{ tss_chart|safe }}
+</section>
+{% endif %}
+
+<section class="card">
+  <h2>{{ L.plans }}</h2>
+  <ul class="plist">
+    {% for p in plans %}
+    <li><a href="/plan/{{ p.id }}">{{ p.id }}</a>
+      <span class="hint">{{ p.weeks|length }} {{ L.weeks|lower }} · {{ p.total_hours }} {{ L.hours }}</span></li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

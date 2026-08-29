@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ (plan.language if plan else 'en') }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>{% block title %}{{ L.app }}{% endblock %}</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">{{ L.app }}</a>
+  {% block crumbs %}{% endblock %}
+  <a class="help-link" href="/help">{{ L.help }}</a>
+</header>
+<main>
+{% block content %}{% endblock %}
+</main>
+<footer class="foot">
+  {% if plan %}<span>{{ plan.id }}</span>{% endif %}
+  <a href="/">{{ L.dashboard }}</a>
+</footer>
+</body>
+</html>

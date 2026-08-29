@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "intervals": {
+      "command": "/absolute/path/to/intervals-mcp-server/.venv/bin/python",
+      "args": ["/absolute/path/to/intervals-mcp-server/src/intervals_mcp_server/server.py"],
+      "env": {
+        "API_KEY": "your_intervals_icu_api_key",
+        "ATHLETE_ID": "i123456",
+        "INTERVALS_API_BASE_URL": "https://intervals.icu/api/v1",
+        "LOG_LEVEL": "INFO"
+      }
+    }
+  }
+}

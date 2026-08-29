@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{ code }} · {{ L.app }}{% endblock %}
+{% block content %}
+<section class="card empty">
+  <h1>{{ code }} — {{ L.not_found if code == 404 else 'Error' }}</h1>
+  <p class="hint">{{ detail }}</p>
+  <p><a href="/">{{ L.dashboard }}</a></p>
+</section>
+{% endblock %}

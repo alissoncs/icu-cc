@@ -1,0 +1,55 @@
+# Athlete profile — the single source of truth for every calculation in this repo.
+# Everything downstream (zones, fueling, benchmarks, load targets) reads this file.
+# Keep `physiology.ftp_w` and `athlete.weight_kg` current: they drive most of the math.
+
+athlete:
+  name: alisson_cs
+  birth_date: 1990-01-01     # TODO placeholder - set your real date
+  sex: male                  # male | female — only affects benchmark reference tables
+  height_cm: 178             # TODO placeholder - set your real height
+  weight_kg: 75.0        # from Intervals.icu (icu_weight), 2026-08-27
+
+physiology:
+  ftp_w: 228                 # from Intervals.icu (icu_ftp), 2026-08-27 = 3.04 W/kg
+  ftp_source: intervals_estimate   # ramp_test | 20min_test | 8min_test | intervals_estimate | race
+  ftp_updated: 2026-08-27    # re-test or re-estimate every 6-8 weeks
+  max_hr: 190                # TODO placeholder - not in Intervals.icu, set from a real max
+  lthr: 168                  # TODO placeholder - avg HR of a 20-30 min all-out effort
+  resting_hr: 48             # TODO placeholder - set from morning measurements
+  vo2max: null               # ml/kg/min, optional
+  w_prime_j: null            # anaerobic work capacity in joules, optional
+
+# Sweat and sodium losses. Defaults below are population averages — replace them with
+# your own numbers as soon as you can (see docs/sweat-test.md).
+sweat:
+  measured: false
+  rate_l_per_h: 0.9          # typical range 0.5-2.0 L/h at 18 °C, moderate intensity
+  sodium_mg_per_l: 800       # typical range 200-2000 mg/L; >1200 = "salty sweater"
+  reference_temp_c: 18       # temperature at which rate_l_per_h was measured/estimated
+
+nutrition:
+  # Highest hourly carb intake you have actually tolerated in training, not your goal.
+  # The fueling model will not prescribe more than this + 10 g/h (gut-training overload).
+  gut_trained_carb_g_per_h: 70
+  caffeine_mg_per_kg: 3.0    # 3-6 mg/kg, 45-60 min pre-effort; set 0 to disable
+  restrictions: []           # e.g. ["lactose", "fructose-sensitive"]
+  preferred_products: []     # e.g. ["Maurten 320", "SIS Beta Fuel", "rice cakes"]
+
+training:
+  weekly_hours: 8
+  days_available: [mon, tue, wed, thu, fri, sat, sun]
+  long_ride_day: sat
+  discipline: road           # road | gravel | mtb | track | tt
+  # Target CTL ramp rate in TSS/day per week. >7 is a common injury/illness threshold.
+  max_ramp_rate: 5
+
+goals:
+  # No real goals yet. `coach taper` targets the next A goal, so leave this empty
+  # until you have an actual event - otherwise it plans toward a race that does not exist.
+  # - name: Your event
+  #   date: 2026-11-15
+  #   priority: A
+  #   type: gran_fondo
+  #   duration_h: 4.5
+  #   elevation_m: 2200
+  #   notes: ""
