@@ -1,0 +1,62 @@
+[
+  {
+    "id": "i1000",
+    "date": "2026-08-24",
+    "name": "Long endurance with tempo blocks",
+    "type": "Ride",
+    "durationS": 12600,
+    "tss": 215,
+    "npW": 196,
+    "avgPowerW": 178,
+    "intensityFactor": 0.86,
+    "avgHr": 141
+  },
+  {
+    "id": "i1001",
+    "date": "2026-08-25",
+    "name": "Recovery spin",
+    "type": "Ride",
+    "durationS": 2700,
+    "tss": 22,
+    "npW": 110,
+    "avgPowerW": 100,
+    "intensityFactor": 0.482,
+    "avgHr": 115
+  },
+  {
+    "id": "i1002",
+    "date": "2026-08-26",
+    "name": "Endurance",
+    "type": "Ride",
+    "durationS": 5400,
+    "tss": 68,
+    "npW": 150,
+    "avgPowerW": 140,
+    "intensityFactor": 0.658,
+    "avgHr": 128
+  },
+  {
+    "id": "i1003",
+    "date": "2026-08-27",
+    "name": "Threshold 2x20",
+    "type": "Ride",
+    "durationS": 4800,
+    "tss": 95,
+    "npW": 190,
+    "avgPowerW": 150,
+    "intensityFactor": 0.833,
+    "avgHr": 150
+  },
+  {
+    "id": "i1004",
+    "date": "2026-08-28",
+    "name": "Endurance",
+    "type": "Ride",
+    "durationS": 3600,
+    "tss": 40,
+    "npW": 140,
+    "avgPowerW": 130,
+    "intensityFactor": 0.614,
+    "avgHr": 125
+  }
+]

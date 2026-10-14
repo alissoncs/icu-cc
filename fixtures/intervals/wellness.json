@@ -1,0 +1,299 @@
+[
+  {
+    "id": "2026-07-27",
+    "ctl": 48.82,
+    "atl": 43.34,
+    "rampRate": 0,
+    "ctlLoad": 0,
+    "atlLoad": 0,
+    "weight": 75
+  },
+  {
+    "id": "2026-07-28",
+    "ctl": 49.13,
+    "atl": 45.83,
+    "rampRate": 0,
+    "ctlLoad": 62,
+    "atlLoad": 62,
+    "weight": 75
+  },
+  {
+    "id": "2026-07-29",
+    "ctl": 50.21,
+    "atl": 52.37,
+    "rampRate": 0,
+    "ctlLoad": 95,
+    "atlLoad": 95,
+    "weight": 75
+  },
+  {
+    "id": "2026-07-30",
+    "ctl": 50.16,
+    "atl": 51.79,
+    "rampRate": 0,
+    "ctlLoad": 48,
+    "atlLoad": 48,
+    "weight": 75
+  },
+  {
+    "id": "2026-07-31",
+    "ctl": 48.98,
+    "atl": 44.9,
+    "rampRate": 0,
+    "ctlLoad": 0,
+    "atlLoad": 0,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-01",
+    "ctl": 50.42,
+    "atl": 53.56,
+    "rampRate": 0,
+    "ctlLoad": 110,
+    "atlLoad": 110,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-02",
+    "ctl": 53.58,
+    "atl": 71.06,
+    "rampRate": 0,
+    "ctlLoad": 185,
+    "atlLoad": 185,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-03",
+    "ctl": 53.62,
+    "atl": 68.92,
+    "rampRate": 0,
+    "ctlLoad": 55,
+    "atlLoad": 55,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-04",
+    "ctl": 54,
+    "atl": 69.07,
+    "rampRate": 0,
+    "ctlLoad": 70,
+    "atlLoad": 70,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-05",
+    "ctl": 55.13,
+    "atl": 73.45,
+    "rampRate": 0,
+    "ctlLoad": 102,
+    "atlLoad": 102,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-06",
+    "ctl": 55.01,
+    "atl": 70.33,
+    "rampRate": 0,
+    "ctlLoad": 50,
+    "atlLoad": 50,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-07",
+    "ctl": 53.72,
+    "atl": 60.97,
+    "rampRate": 0,
+    "ctlLoad": 0,
+    "atlLoad": 0,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-08",
+    "ctl": 55.28,
+    "atl": 68.82,
+    "rampRate": 0,
+    "ctlLoad": 120,
+    "atlLoad": 120,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-09",
+    "ctl": 58.63,
+    "atl": 86.02,
+    "rampRate": 0,
+    "ctlLoad": 198,
+    "atlLoad": 198,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-10",
+    "ctl": 58.67,
+    "atl": 82.56,
+    "rampRate": 0,
+    "ctlLoad": 60,
+    "atlLoad": 60,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-11",
+    "ctl": 59.12,
+    "atl": 81.95,
+    "rampRate": 0,
+    "ctlLoad": 78,
+    "atlLoad": 78,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-12",
+    "ctl": 60.44,
+    "atl": 86.35,
+    "rampRate": 0,
+    "ctlLoad": 115,
+    "atlLoad": 115,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-13",
+    "ctl": 60.31,
+    "atl": 82.18,
+    "rampRate": 0,
+    "ctlLoad": 55,
+    "atlLoad": 55,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-14",
+    "ctl": 58.89,
+    "atl": 71.24,
+    "rampRate": 0,
+    "ctlLoad": 0,
+    "atlLoad": 0,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-15",
+    "ctl": 60.56,
+    "atl": 79.06,
+    "rampRate": 0,
+    "ctlLoad": 130,
+    "atlLoad": 130,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-16",
+    "ctl": 63.96,
+    "atl": 95.83,
+    "rampRate": 0,
+    "ctlLoad": 205,
+    "atlLoad": 205,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-17",
+    "ctl": 63.51,
+    "atl": 89.06,
+    "rampRate": 0,
+    "ctlLoad": 45,
+    "atlLoad": 45,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-18",
+    "ctl": 64.02,
+    "atl": 88.52,
+    "rampRate": 0,
+    "ctlLoad": 85,
+    "atlLoad": 85,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-19",
+    "ctl": 65.45,
+    "atl": 93.38,
+    "rampRate": 0,
+    "ctlLoad": 125,
+    "atlLoad": 125,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-20",
+    "ctl": 65.33,
+    "atl": 88.93,
+    "rampRate": 0,
+    "ctlLoad": 60,
+    "atlLoad": 60,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-21",
+    "ctl": 63.79,
+    "atl": 77.09,
+    "rampRate": 0,
+    "ctlLoad": 0,
+    "atlLoad": 0,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-22",
+    "ctl": 65.58,
+    "atl": 85.47,
+    "rampRate": 0,
+    "ctlLoad": 140,
+    "atlLoad": 140,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-23",
+    "ctl": 68.51,
+    "atl": 99.38,
+    "rampRate": 0,
+    "ctlLoad": 190,
+    "atlLoad": 190,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-24",
+    "ctl": 71.96,
+    "atl": 114.77,
+    "rampRate": 0,
+    "ctlLoad": 215,
+    "atlLoad": 215,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-25",
+    "ctl": 71.44,
+    "atl": 106.15,
+    "rampRate": 0,
+    "ctlLoad": 50,
+    "atlLoad": 50,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-26",
+    "ctl": 71.99,
+    "atl": 104.67,
+    "rampRate": 0,
+    "ctlLoad": 95,
+    "atlLoad": 95,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-27",
+    "ctl": 72.89,
+    "atl": 105.38,
+    "rampRate": 0,
+    "ctlLoad": 110,
+    "atlLoad": 110,
+    "weight": 75
+  },
+  {
+    "id": "2026-08-28",
+    "ctl": 72.7,
+    "atl": 100,
+    "rampRate": 0,
+    "ctlLoad": 65,
+    "atlLoad": 65,
+    "weight": 75
+  }
+]

@@ -1,0 +1,227 @@
+[
+  {
+    "id": "i1000",
+    "start_date_local": "2026-08-24T07:10:00",
+    "name": "Long endurance with tempo blocks",
+    "type": "Ride",
+    "moving_time": 12600,
+    "icu_weighted_avg_watts": 196,
+    "icu_average_watts": 178,
+    "average_heartrate": 141,
+    "icu_training_load": 215,
+    "icu_intensity": 86,
+    "icu_ftp": 228,
+    "icu_zone_times": [
+      {
+        "id": "Z1",
+        "secs": 900
+      },
+      {
+        "id": "Z2",
+        "secs": 5400
+      },
+      {
+        "id": "Z3",
+        "secs": 4200
+      },
+      {
+        "id": "Z4",
+        "secs": 1500
+      },
+      {
+        "id": "Z5",
+        "secs": 480
+      },
+      {
+        "id": "Z6",
+        "secs": 120
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "distance": 94500,
+    "total_elevation_gain": 1400
+  },
+  {
+    "id": "i1001",
+    "start_date_local": "2026-08-25T07:10:00",
+    "name": "Recovery spin",
+    "type": "Ride",
+    "moving_time": 2700,
+    "icu_weighted_avg_watts": 110,
+    "icu_average_watts": 100,
+    "average_heartrate": 115,
+    "icu_training_load": 22,
+    "icu_intensity": 48.2,
+    "icu_ftp": 228,
+    "icu_zone_times": [
+      {
+        "id": "Z1",
+        "secs": 2700
+      },
+      {
+        "id": "Z2",
+        "secs": 0
+      },
+      {
+        "id": "Z3",
+        "secs": 0
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "distance": 20250,
+    "total_elevation_gain": 300
+  },
+  {
+    "id": "i1002",
+    "start_date_local": "2026-08-26T07:10:00",
+    "name": "Endurance",
+    "type": "Ride",
+    "moving_time": 5400,
+    "icu_weighted_avg_watts": 150,
+    "icu_average_watts": 140,
+    "average_heartrate": 128,
+    "icu_training_load": 68,
+    "icu_intensity": 65.8,
+    "icu_ftp": 228,
+    "icu_zone_times": [
+      {
+        "id": "Z1",
+        "secs": 600
+      },
+      {
+        "id": "Z2",
+        "secs": 4500
+      },
+      {
+        "id": "Z3",
+        "secs": 300
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "distance": 40500,
+    "total_elevation_gain": 600
+  },
+  {
+    "id": "i1003",
+    "start_date_local": "2026-08-27T07:10:00",
+    "name": "Threshold 2x20",
+    "type": "Ride",
+    "moving_time": 4800,
+    "icu_weighted_avg_watts": 190,
+    "icu_average_watts": 150,
+    "average_heartrate": 150,
+    "icu_training_load": 95,
+    "icu_intensity": 83.3,
+    "icu_ftp": 228,
+    "icu_zone_times": [
+      {
+        "id": "Z1",
+        "secs": 1200
+      },
+      {
+        "id": "Z2",
+        "secs": 1500
+      },
+      {
+        "id": "Z3",
+        "secs": 300
+      },
+      {
+        "id": "Z4",
+        "secs": 1600
+      },
+      {
+        "id": "Z5",
+        "secs": 200
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "distance": 36000,
+    "total_elevation_gain": 533
+  },
+  {
+    "id": "i1004",
+    "start_date_local": "2026-08-28T07:10:00",
+    "name": "Endurance",
+    "type": "Ride",
+    "moving_time": 3600,
+    "icu_weighted_avg_watts": 140,
+    "icu_average_watts": 130,
+    "average_heartrate": 125,
+    "icu_training_load": 40,
+    "icu_intensity": 61.4,
+    "icu_ftp": 228,
+    "icu_zone_times": [
+      {
+        "id": "Z1",
+        "secs": 500
+      },
+      {
+        "id": "Z2",
+        "secs": 3000
+      },
+      {
+        "id": "Z3",
+        "secs": 100
+      },
+      {
+        "id": "Z4",
+        "secs": 0
+      },
+      {
+        "id": "Z5",
+        "secs": 0
+      },
+      {
+        "id": "Z6",
+        "secs": 0
+      },
+      {
+        "id": "Z7",
+        "secs": 0
+      }
+    ],
+    "distance": 27000,
+    "total_elevation_gain": 400
+  }
+]

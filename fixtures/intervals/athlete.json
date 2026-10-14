@@ -1,0 +1,16 @@
+{
+  "id": "i0",
+  "name": "alisson_cs",
+  "icu_weight": 75,
+  "sportSettings": [
+    {
+      "types": [
+        "Ride",
+        "VirtualRide"
+      ],
+      "ftp": 228,
+      "lthr": 168,
+      "max_hr": 190
+    }
+  ]
+}

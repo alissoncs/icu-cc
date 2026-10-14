@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "id": "i1000",
+    "date": "2026-08-24",
+    "name": "Long endurance with tempo blocks",
+    "type": "Ride",
+    "durationS": 12600,
+    "tss": 215,
+    "npW": 196,
+    "avgPowerW": 178,
+    "intensityFactor": 0.86,
+    "avgHr": 141
+  },
+  "ftpW": 228,
+  "variabilityIndex": 1.1,
+  "efficiencyFactor": 1.39,
+  "decouplingPct": 6.2,
+  "kj": 2243,
+  "distanceKm": 94.5,
+  "elevationM": 1400,
+  "zones7": [
+    {
+      "zone": "Z1",
+      "name": "Active Recovery",
+      "lowW": 0,
+      "highW": 125,
+      "seconds": 900,
+      "pct": 7.1
+    },
+    {
+      "zone": "Z2",
+      "name": "Endurance",
+      "lowW": 125,
+      "highW": 171,
+      "seconds": 5400,
+      "pct": 42.9
+    },
+    {
+      "zone": "Z3",
+      "name": "Tempo",
+      "lowW": 171,
+      "highW": 205,
+      "seconds": 4200,
+      "pct": 33.3
+    },
+    {
+      "zone": "Z4",
+      "name": "Lactate Threshold",
+      "lowW": 205,
+      "highW": 239,
+      "seconds": 1500,
+      "pct": 11.9
+    },
+    {
+      "zone": "Z5",
+      "name": "VO2max",
+      "lowW": 239,
+      "highW": 274,
+      "seconds": 480,
+      "pct": 3.8
+    },
+    {
+      "zone": "Z6",
+      "name": "Anaerobic Capacity",
+      "lowW": 274,
+      "highW": 342,
+      "seconds": 120,
+      "pct": 1
+    },
+    {
+      "zone": "Z7",
+      "name": "Neuromuscular Power",
+      "lowW": 342,
+      "highW": null,
+      "seconds": 0,
+      "pct": 0
+    }
+  ],
+  "zones3": {
+    "lowPct": 50,
+    "moderatePct": 45.2,
+    "highPct": 4.8
+  },
+  "findings": [
+    "IF 0.86 — threshold-level session. Costly; earn the rest.",
+    "Aerobic decoupling 6.2% — moderate drift."
+  ],
+  "warnings": [
+    "Missing from the data: heart rate zones. Findings are partial."
+  ]
+}
